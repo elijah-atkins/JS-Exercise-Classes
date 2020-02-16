@@ -185,11 +185,11 @@ class Student {
   listSubjects(){
     return `Loving ${this.favSubjects.join(", ")}`
   }
-  PRAssignment(){
-
+  PRAssignment(subject){
+    return `${this.name} has submitted a PR for ${subject}`
   }
-  sprintChallenge(){
-    
+  sprintChallenge(subject){
+    return `${this.name} has has begun sprint challenge on ${subject}`
   }
 }
 
