@@ -135,8 +135,9 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor {
+class Instructor extends Lambdasian{
   constructor(instructor){
+    super(instructor);
     this.name = instructor.name;
     this.age = instructor.age;
     this.location = instructor.location;
@@ -149,9 +150,6 @@ class Instructor {
   }
   grade(student, subject){
     return `${student} receives a perfect score on ${subject}`  
-  }
-  speak(){
-    return `Hello my name is ${this.name}, I am from ${this.location}`
   }
 }
 
@@ -170,17 +168,15 @@ class Instructor {
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
+class Student extends Lambdasian { 
   constructor(stu){
+    super(stu);
     this.name = stu.name;
     this.age = stu.age;
     this.location = stu.location;
     this.previousBackground = stu.previousBackground;
     this.className = stu.className;
     this.favSubjects = stu.favSubjects;
-  }
-  speak(){
-    return `Hello my name is ${this.name}, I am from ${this.location}`
   }
   listSubjects(){
     return `Loving ${this.favSubjects.join(", ")}`
@@ -206,7 +202,18 @@ class Student {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
+class ProjectManager extends Lambdasian{
+  constructor(pm){
+    super(pm);
+    this.name = pm.name;
+    this.age = pm.age;
+    this.location = pm.location;
+    this.specialty = pm.specialty;
+    this.favLanguage = pm.favLanguage;
+    this.catchPhrase = pm.catchPhrase;
+    this.gradClassName = pm.gradClassName;
+    this.favInstructor = pm.favInstructor;
+  }
 
 }
 
