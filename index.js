@@ -171,7 +171,26 @@ class Instructor {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 class Student {
+  constructor(stu){
+    this.name = stu.name;
+    this.age = stu.age;
+    this.location = stu.location;
+    this.previousBackground = stu.previousBackground;
+    this.className = stu.className;
+    this.favSubjects = stu.favSubjects;
+  }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`
+  }
+  listSubjects(){
+    return `Loving ${this.favSubjects.join(", ")}`
+  }
+  PRAssignment(){
 
+  }
+  sprintChallenge(){
+    
+  }
 }
 
 /*
